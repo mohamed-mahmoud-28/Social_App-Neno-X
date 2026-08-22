@@ -214,7 +214,7 @@ export default function NavBar() {
                 </Link>
 
                 {/* Mobile Navigation Card */}
-                <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-1.5">
+                <div className="flex flex-col gap-1 rounded-2xl border border-slate-200 bg-slate-50/70 p-1.5">
                   <NavLink
                     to="/home"
                     onClick={() => setIsOpen(false)}
