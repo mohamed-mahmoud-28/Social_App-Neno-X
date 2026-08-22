@@ -1,0 +1,17 @@
+export const queryKeys = {
+  myProfile: ["myProfile"],
+  userProfile: (userId) => ["userProfile", userId],
+  posts: ["posts"],
+  post: ["post"],
+  postById: (postId) => ["post", postId],
+  comments: (postId) => ["comments", postId],
+  profilePosts: (userId) => ["profilePosts", userId],
+  homeFeed: ["homeFeed"],
+  bookmarks: ["bookmarks"],
+  followSuggestions: ["followSuggestions"],
+  postLikes: (postId) => ["postLikes", postId],
+  replies: (postId, commentId) => ["replies", postId, commentId],
+  notificationsRoot: ["notifications"],
+  notifications: (page) => ["notifications", page],
+  unreadNotifications: ["unreadNotifications"],
+};

@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --neno-primary: #087cf0;
+    --neno-accent: #16c7e8;
+    --neno-page: #f4f8fd;
+    --neno-text: #10213f;
+  }
+
+  html {
+    background: var(--neno-page);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    background: radial-gradient(circle at top right, rgba(22, 199, 232, 0.12), transparent 30rem), var(--neno-page);
+    color: var(--neno-text);
+    font-family: "Segoe UI Variable", "Noto Sans Arabic", "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  button, a, input, textarea, select {
+    -webkit-tap-highlight-color: transparent;
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+
+  button, input, textarea, select { font: inherit; }
+  img { max-width: 100%; }
+
+  :focus-visible {
+    outline: 2px solid var(--neno-accent);
+    outline-offset: 3px;
+  }
+
+  ::selection { background: #baeef6; color: #08275d; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}
