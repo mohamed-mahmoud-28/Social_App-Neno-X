@@ -16,7 +16,7 @@ export default function Layout() {
   const titles = {
     "/": "Create your account",
     "/login": "Log in",
-    "/home": "Home feed",
+    "/home": "Home Feed",
     "/following-users": "Following Users",
     "/profile": "Your Profile",
     "/settings": "Settings",
@@ -28,7 +28,7 @@ export default function Layout() {
     ? "Post Details"
     : pathname.startsWith("/users/")
       ? "User Profile"
-      : titles[pathname] || "Page not found";
+      : titles[pathname] || "Page Not Found";
 
   return (
     <>
@@ -37,6 +37,7 @@ export default function Layout() {
       <Helmet>
         <title>{pageTitle} | Neno X</title>
       </Helmet>
+      
       <NavBar />
 
       {authToken && <AsiadBar />}
@@ -47,6 +48,7 @@ export default function Layout() {
       >
         <Outlet />
       </main>
+
       <Footer />
     </>
   );
